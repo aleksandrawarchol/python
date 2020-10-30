@@ -6,7 +6,7 @@ class Graph(object):
             graph_dict = {}
         self.graph_dict = graph_dict
 
-    @staticmethod
+    @staticmethod   # na pewno?
     def add_vertex(self, vertex):
         if vertex not in self.graph_dict.keys():
             self.graph_dict[vertex] = []

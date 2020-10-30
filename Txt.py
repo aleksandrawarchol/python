@@ -2,7 +2,7 @@ import os
 import nltk
 from nltk.tokenize import word_tokenize, sent_tokenize
 
-class Txt:
+class Txt:  # czy ta klasa coś robi, oprócz metody statycznej tokenize?
     def __init__(self):
         self.path = os.path.join(os.getcwd(), "nkjp.txt")
 
@@ -11,7 +11,7 @@ class Txt:
 
     @staticmethod
     def tokenize(pathToFile):
-        file = open(pathToFile, "r", encoding='utf-8')
+        file = open(pathToFile, "r", encoding='utf-8')  # lepiej nie przesłaniać nazw wbudowanych
         text = file.read()
         file.close()
         tokenized_text = word_tokenize(text)
